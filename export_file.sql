@@ -1,0 +1,23 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "TaxPayment" (
+	id INTEGER NOT NULL, 
+	company VARCHAR(100) NOT NULL, 
+	amount FLOAT NOT NULL, 
+	payment_date VARCHAR(20), 
+	status VARCHAR(20) NOT NULL, 
+	due_date VARCHAR(20), 
+	PRIMARY KEY (id)
+);
+INSERT INTO TaxPayment VALUES(1,'derm',4100.0,'09/26/2024','paid','01/15/2025');
+INSERT INTO TaxPayment VALUES(2,'derm',4100.0,'10/12/2024','paid','01/15/2025');
+INSERT INTO TaxPayment VALUES(3,'tekk',15200.0,'12/14/2024','paid','06/15/2024');
+INSERT INTO TaxPayment VALUES(4,'tek',15200.0,'NA','paid','09/15/2024');
+INSERT INTO TaxPayment VALUES(5,'tek',11400.0,'08/11/2024','paid','09/15/2024');
+INSERT INTO TaxPayment VALUES(6,'tek',14440.0,'09/21/2024','paid','01/15/2025');
+INSERT INTO TaxPayment VALUES(7,'tek',15200.0,'10/18/2024','paid','01/15/2025');
+INSERT INTO TaxPayment VALUES(8,'tek',23520.0,NULL,'unpaid','01/15/2025');
+INSERT INTO TaxPayment VALUES(9,'tek',16800.0,NULL,'unpaid','01/15/2025');
+INSERT INTO TaxPayment VALUES(10,'tek',16800.0,NULL,'unpaid','01/15/2025');
+INSERT INTO TaxPayment VALUES(11,'tek',16800.0,NULL,'unpaid','01/15/2025');
+COMMIT;
